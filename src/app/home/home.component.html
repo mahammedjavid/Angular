@@ -1,0 +1,59 @@
+<!-- !InterPolation -->
+<!-- <ul>
+    <li>{{name}} from {{place}}</li>
+    <li>{{name2}} from {{place2}}</li>
+    <li>{{name3}} from {{place3}}</li>
+</ul> -->
+
+<!-- !Property Binding -->
+<!-- <button [disabled] = "isDesabled">Show Books</button> -->
+
+<!-- !Event Binding -->
+<!-- <button (click)="HandleClick()" [disabled]="isDesabled">Show Books</button> -->
+
+<!-- !Two way binding : Listing the event at that same time updating values between parent and child components -->
+
+<!-- <input type="text" [(ngModel)]="myName"> -->
+
+<!-- <h1>{{myName}}</h1> -->
+
+
+<!-- !ngIf : BulitIn Directives -->
+
+
+<!-- 
+<button (click)="isShowing=!isShowing">
+    <ng-container *ngIf="!isShowing">Show</ng-container>
+    <ng-container *ngIf="isShowing">Hide</ng-container>
+</button>
+<ul *ngIf="isShowing">
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul> 
+-->
+
+<!-- !ngFor -->
+
+<!-- 
+<ul>
+    <ng-container *ngFor="let book of books">
+        <li>The name of Book is {{book.name}} and author name is {{book.author}}. <br> Details of this book is {{book.description}}</li>
+    </ng-container>
+    
+</ul> -->
+
+<!-- !Pipes -->
+
+<ul>
+    <ng-container *ngFor="let book of books">
+        <li>The name of Book is {{book.name | titlecase}} and author name is {{book.author | titlecase}}. <br> Details of this book is
+            {{book.description}}
+        </li>
+        <p>{{book.amount | currency:'INR' }}</p>
+    </ng-container>
+
+</ul>
